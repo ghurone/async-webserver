@@ -17,11 +17,8 @@ REQUEST_TIMEOUT = 5
 async def handle_client(client_socket: socket.socket):
     """
     Handle a single client connection.
-
-    1. Read data from the client with a timeout.
-    2. Construct and send a simple 'Hello words!' response.
-    3. Cleanly close the connection.
     """
+    
     loop = asyncio.get_running_loop()
 
     try:
